@@ -1,6 +1,5 @@
 import vk_api
 from vk_api.bot_longpoll import VkBotEventType, VkBotLongPoll
-import peewee
 import time
 from datetime import datetime
 
@@ -12,7 +11,9 @@ class MyLongPoll(VkBotLongPoll):
                     yield event
             except Exception as e:
                 print(e)
-
+                
+tokenstand = ""
+tokengroup = ""
 
 vk_session = vk_api.VkApi(token=tokenstand) #Token Standalone-приложения
 tools = vk_api.VkTools(vk_session)
